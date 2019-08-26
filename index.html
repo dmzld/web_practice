@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>이윤석의 web</title>
+    <meta charset="utf-8">
+    <meta name="keyword" content="이윤석,코딩,html,web,웹">
+    <meta name="description" content="html 연습한 page"> 
+    <meta http-equiv="refresh" content="30">
+    <style>
+        a{
+            text-decoration-color: red;
+        }
+        ::selection{
+            color: red;
+            background: red;
+        }
+    </style>
+</head>
+
+<header>
+        <a href="https://op.gg/summoner/userName=하하호호윤석"><img src="images/리신.jpg" width="100" height="100" alt="리신잘함"></a>
+        <h1><a href="./index.html">이윤석</a></h1>    
+</header>
+
+<nav>
+    <ol>
+        <li ><a href="./1.html">한</a></li>
+        <li ><a href="./2.html">둘</a></li>
+        <li ><a href="./3.html">셋</a></li>
+    </ol>
+        
+</nav>
+
+<section>
+    <article>
+        <h2>1.</h2>
+        내용1
+    </article>
+    <article>
+        <h2>3.</h2>
+        내용2        
+    </article>
+    <article>
+        <h2>3.</h2>
+        내용3        
+    </article>
+</section>
+
+<body>
+    <table border="1">
+    <tr>
+        <th>툴</th><th>수준</th><th>프로젝트</th    >
+    </tr>
+    <tr>
+        <td>AndroidStudio</td><td>중급</td><td>아르모니아</td>
+    </tr>
+    <tr>
+        <td>Angular2</td><td>중급</td><td>에스코트</td>
+    </tr>
+    <tr>
+        <td>PostScript</td><td>중급</td><td>명함만들기</td>
+    </tr>
+    <tr>
+        <td colspan=2>2칸병합</td><td></td>
+    </tr>
+    </table>
+
+    <form action="address" method="post" enctype="multipart/form-data">
+        <p>
+            <label>제목 : 
+                <input type="text" name="title" cols="50" placeholder="제목">
+            </label>
+            <select name="tags">
+                <option value="1">자유</option>
+                <option value="2">공지</option>
+            </select>
+        </p>
+        <p>
+            <label>내용 : 
+                <textarea name="contents" cols="50" rows="10" placeholder="내용"></textarea>
+            </label>
+        </p>
+        <p>
+            <input type="file" name="picture">
+        </p>
+        <p>
+            <label>비밀번호 : 
+                <input type="password" name="pwd">
+            </label>
+        </p>
+        <input type="submit" value="등록"><input type="reset">
+        <p>
+            <h3>단일선택</h3>
+            b1check1<input type="radio" name="box1" value="val1" checked>
+            b1check2<input type="radio" name="box1" value="val2">
+            b1check3<input type="radio" name="box1" value="val3">
+        </p>
+        <p>
+            <h3>다중선택</h3>
+            <label>b2check1<input type="checkbox" name="box2" value="val1"></label>
+            b2check2<input type="checkbox" name="box2" value="val2" checked>
+            b2check3<input type="checkbox" name="box2" value="val3" checked>
+        </p>
+    </form>
+    
+</body>
+<footer>
+    푸터
+</footer>
