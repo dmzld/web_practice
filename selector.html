@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #px{
+                font-size:15px;
+            }
+            #rem{
+                font-size:1rem;
+            }
+
+            li{
+                color:red;
+                text-decoration: underline;
+            }
+            ol li{
+                color:aqua;
+            }
+            #direct li{
+                color:greenyellow;
+            }
+            #s1{
+                color:blue;
+            }
+            .c1{
+                color:green;
+            }
+            p{
+                text-align: justify;
+                border:1px solid blue;
+                font-family: arial, Verdana, serif;
+                font-weight:bold;
+                line-height:30px;
+            }
+
+            #idSel{
+                color:red;
+            }
+            .classSel{
+                color:pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="px">PX</div>
+        <div id="rem">REM</div>
+
+        <p>
+            TEXT<br>
+            FFFF
+        </p>
+
+        <br>
+
+        <h3 id="idSel" class="classSel" style="color:yellowgreen
+        ">Cascading</h3>
+        <ul>
+            <li class="c1">HTML</li>
+            <li class="c1" id="s1">CSS</li>
+            <li>JS</li>
+        </ul>
+        <ol id="direct">
+            <li>HTML</li>
+            <li >CSS
+                <ol>
+                    <li>id</li>
+                    <li>class</li>
+                </ol>
+            </li>
+            <li>JS</li>
+        </ol>
+    </body>
+</html>
