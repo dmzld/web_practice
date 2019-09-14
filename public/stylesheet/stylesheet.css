@@ -1,0 +1,64 @@
+a{
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    color:green;
+}
+/* a:visited{
+    color:blue;
+} */
+ul{
+    list-style-type: none;
+}
+li{
+    margin:5px;
+}
+html{width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.container{
+    display:flex;
+    /* flex-direction: row-reverse; */
+    flex-direction: column;
+}
+.content{
+    display: flex;
+}
+main{
+    padding:10px;
+}
+nav, aside{
+    flex-basis:150px;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: justify;
+}
+header{
+    border-bottom:1px solid lightgray;
+    padding:10px;
+    text-align: center;
+    font-weight: 900;
+    width:100%;
+}
+footer{
+    border-top:1px solid lightgray;
+    padding:10px;
+    text-align: center;
+}
+#item{
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight:600;
+}
+
+
+
+.contact h2{
+    color: tomato;
+  }
+  .contact .contact-form label{
+    display: inline-block;
+    width: 50px;
+  }

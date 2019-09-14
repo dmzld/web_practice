@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div>
+      <div>
+        <a href="/board">Back</a>
+        <a href="/board/<%= board._id %>/edit">Edit</a>
+        <form action="/board/<%= board._id %>?_method=delete" method="post"> <!-- 2 -->
+          <a href="#" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
+        </form>
+      <div>
+      <h2>Show</h2>
+      <h3><%= board.title%></h3>
+      <div>
+        <label>date</label><span><%= board.date %></span>
+      </div>
+      <div>
+        <label>contents</label><span><%= board.contents %></span>
+      </div>
+    </div>
+  </body>
+</html>

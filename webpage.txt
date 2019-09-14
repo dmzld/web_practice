@@ -1,0 +1,15 @@
+#0
+mean stack : mongo, express, angular, node js
+
+#1
+npm install express
+app.use : method에 상관없이 콜백함수 실행
+__dirname : nodejs에서의 '현재 실행되고있는 프로그램 위치' 전역변수
+
+ejs; Embedded JavaScript : dynamic website를 만들기 위해 template으로 사용되는 파일
+render함수(res.render)는 ejs를 /views에서 찾으므로 폴더이름은 고정
+ejs는 html+js코드, 이때 js코드는 <% %>사이에 있어야함, 변수 출력시 <%= %> 사용
+
+
+#2
+환경변수 : DB를 APP에서 연결할 수 있도록 미리 연결 주소를 저장해놓고 APP에서 사용

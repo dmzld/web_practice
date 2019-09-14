@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <title>이윤석의 web</title>
+        <meta charset="utf-8">
+        <meta name="keyword" content="이윤석,코딩,html,web,웹">
+        <meta name="description" content="html 연습한 page"> 
+        <meta http-equiv="refresh" content="30">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/stylesheet/stylesheet.css">
+        </head>
+    
+    <body>
+        <div class="container">
+            <header>
+                <% include ../partials/nav %>
+            </header>
+            <main>
+                <section>
+                    <h2>Board</h2>
+                    <ul>
+                        <% boards.forEach(function(boards) { %>
+                            <li>
+                              <a href="/board/<%= boards._id %>"><%= boards.title %></a>
+                            </li>
+                          <% }) %>            
+                    </ul>
+                </section>
+                <div>
+                    <div><a href="/board/new">글쓰기</a></div>
+                </div>
+            </main>
+            <footer>
+                <a href="https://github.com/dmzld">GitHub - dmzld</a>
+            </footer>
+        </div>
+        </div>
+    
+        
+        
+    </body>    
+</html>
