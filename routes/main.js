@@ -1,12 +1,23 @@
 var express = require("express");
 var router = express.Router();
 var Board = require("../models/Board");
+var path = require("path");
+var fs = require("fs");
+
+const directoryPath = path.join(__dirname, '/../public/data/');
 
 router.get("/", function(req, res){
-  Board.find({}, (err, boards)=>{ // 모델.find{검색조건, 콜백함수}
-        if(err) return res.json(err);   
-        res.render("main/main", {boards:boards});
-    });
+  fs.readdir(directoryPath, function (err, files) {
+    if (err) {
+        return console.log('Unable to scan directory: ' + err);
+    }
+    res.render("main/main", {files:files}); 
+  });  
+});
+
+
+router.get("/notes", function (req, res) {
+  res.send(order);
 });
 
 router.get("/new",(req, res)=>{ 
@@ -27,8 +38,6 @@ router.get("/:id",(req, res)=>{
   });
 });
 
-$.ajax({
-  
-})
+
 
 module.exports = router;

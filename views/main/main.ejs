@@ -8,6 +8,7 @@
         <meta http-equiv="refresh" content="30">
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/ajax/main.js"></script>
         <link rel="stylesheet" href="/stylesheet/stylesheet.css">
         </head>
     
@@ -18,15 +19,17 @@
             </header>
             <main>
                 <h2>Main</h2>
+                                
                 <section>
                     <ul>
-                        <% boards.forEach(function(boards) { %>
+                        <% files.forEach(function(file) { %>
                             <li>
-                              <a href="/<%= boards._id %>"><%= boards.title %> <%= boards.date %></a>
+                                <a id="note"><span><%= file %></span></a>
                             </li>
-                          <% }) %>            
+                        <% }) %>
                     </ul>
                 </section>
+                <a href="/main/"><button>list</button></a>
             </main>
             <footer>
                 <a href="https://github.com/dmzld">GitHub - dmzld</a>

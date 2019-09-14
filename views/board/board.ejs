@@ -22,7 +22,7 @@
                     <ul>
                         <% boards.forEach(function(boards) { %>
                             <li>
-                              <a href="/board/<%= boards._id %>"><%= boards.title %></a>
+                              <a href="/board/<%= boards._id %>"><span><%= boards.title %></span><span style="float: right"><%= boards.date %></span></a>
                             </li>
                           <% }) %>            
                     </ul>

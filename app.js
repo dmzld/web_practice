@@ -37,7 +37,8 @@ app.use("/", require("./routes/about"));
 app.use("/main", require("./routes/main"));
 app.use("/board", require("./routes/board"));
 
-app.use("/contacts", require("./routes/contacts"));
+
+//app.use("/sample", require("./routes/sample"));
 
 
 app.listen(3000, function(){
