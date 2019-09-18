@@ -9,16 +9,20 @@
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="/stylesheet/stylesheet.css">
-        </head>
+    </head>
     
     <body>
         <div class="container">
-            <header>
+            <nav>
                 <% include ../partials/nav %>
+            </nav>
+
+            <header>
+                <h2>Board</h2>    
             </header>
+            
             <main>
                 <section>
-                    <h2>Board</h2>
                     <ul>
                         <% boards.forEach(function(boards) { %>
                             <li>
@@ -28,7 +32,7 @@
                     </ul>
                 </section>
                 <div>
-                    <div><a href="/board/new">글쓰기</a></div>
+                    <a href="/board/new" style="float:right">Write</a>
                 </div>
             </main>
             <footer>
@@ -36,8 +40,5 @@
             </footer>
         </div>
         </div>
-    
-        
-        
-    </body>    
+    </body>
 </html>

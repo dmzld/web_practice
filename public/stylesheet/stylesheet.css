@@ -10,9 +10,15 @@ a:hover{
 } */
 ul{
     list-style-type: none;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 li{
     margin:5px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 html{width:80%;
     margin-left:auto;
@@ -29,18 +35,23 @@ html{width:80%;
 main{
     padding:10px;
 }
-nav, aside{
+/* nav, aside{
     flex-basis:150px;
     flex-shrink: 0;
     flex-direction: row;
     align-items: justify;
-}
-header{
+} */
+nav{
     border-bottom:1px solid lightgray;
     padding:10px;
     text-align: center;
     font-weight: 900;
-    width:100%;
+}
+bottom{
+    padding:10px;
+}
+content{
+    padding:10px;
 }
 footer{
     border-top:1px solid lightgray;

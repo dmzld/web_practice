@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
     <head>
         <title>이윤석의 web</title>
@@ -15,22 +15,17 @@
     <body>
         <div class="container">
             <nav>
-                <% include ../partials/nav %>
+                <% include ../../partials/nav %>
             </nav>
-            
-            <header>
-                <h2>Main</h2>    
+
+            <header style="text-align: center">
+                <h2>Note_ex</h2>
             </header>
 
-            <main>                
-                <section>
-                    <ul>
-                        <% files.forEach(function(file) { %>
-                            <a href="/main/notes/<%= file %>"><li><%= file %></li></a>
-                        <% }) %>
-                    </ul>
-                </section>
+            <main style="text-align: center;">
+                note example    
             </main>
+
             <footer>
                 <a href="https://github.com/dmzld">GitHub - dmzld</a>
             </footer>

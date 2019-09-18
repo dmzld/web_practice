@@ -2,7 +2,7 @@ $(function() {
     $("#notes").on("click", function () {
       $.ajax({
         type: 'GET',
-        url: '/main/note',
+        url: '/main/notes',
         success: function(note) {
           var html = '';
           for (var i = 0; i< order.length; i++) {

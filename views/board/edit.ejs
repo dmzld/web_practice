@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <body>
-      <div>
-          <div>
-            <a href="/">Back</a>
-          </div>
-          <h2>Edit</h2>
-          <form action="/board/<%= board._id %>?_method=put" method="post">
-            <div>
-              <label for="title">title</label>
-              <input type="text" id="title" name="title" value="<%= board.title %>">
-            </div>
-            <div>
-              <label for="date">date</label>
-              <input type="text" id="date" name="date" value="<%= new Date().toLocaleString() %>">
-            </div>
-            <div>
-              <label for="contents">contents</label>
-              <input type="text" id="contents" name="contents" value="<%= board.contents %>">
-            </div>
-            <div>
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+    <head>
+        <title>이윤석의 web</title>
+        <meta charset="utf-8">
+        <meta name="keyword" content="이윤석,코딩,html,web,웹">
+        <meta name="description" content="html 연습한 page"> 
+        <meta http-equiv="refresh" content="30">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/stylesheet/stylesheet.css">
+    </head>
+    <body>
+        <div class="container">
+          <nav>
+              <% include ../partials/nav %>
+          </nav>
+
+          <header>
+            <h2>Edit</h2>
+          </header>
+          
+          <main>
+              <form action="/board/<%= board._id %>?_method=put" method="post">
+                <div>
+                  <label for="title">title</label>
+                  <input type="text" id="title" name="title" value="<%= board.title %>">
+                </div>
+                <div>
+                  <label for="date">date</label>
+                  <input type="text" id="date" name="date" value="<%= new Date().toLocaleString() %>">
+                </div>
+                <div>
+                  <label for="contents">contents</label>
+                  <input type="text" id="contents" name="contents" value="<%= board.contents %>">
+                </div>
+                
+                <bottom>
+                  <div style="float:right">
+                    <button type="submit">Submit</button>
+                    <a href="/board">Back</a>
+                  </div>
+                </bottom>
+                
+              </form>
+          </main>
+          
         </div>
-  </body>
+    </body>
 </html>
+          

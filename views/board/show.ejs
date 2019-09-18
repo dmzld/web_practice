@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <div>
-      <div>
-        <a href="/board">Back</a>
-        <a href="/board/<%= board._id %>/edit">Edit</a>
-        <form action="/board/<%= board._id %>?_method=delete" method="post"> <!-- 2 -->
-          <a href="#" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
-        </form>
-      <div>
-      <h2>Show</h2>
-      <h3><%= board.title%></h3>
-      <div>
-        <label>date</label><span><%= board.date %></span>
-      </div>
-      <div>
-        <label>contents</label><span><%= board.contents %></span>
-      </div>
-    </div>
-  </body>
+    <head>
+        <title>이윤석의 web</title>
+        <meta charset="utf-8">
+        <meta name="keyword" content="이윤석,코딩,html,web,웹">
+        <meta name="description" content="html 연습한 page"> 
+        <meta http-equiv="refresh" content="30">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/stylesheet/stylesheet.css">
+    </head>
+    <body>
+        <div class="container">
+          <nav>
+              <% include ../partials/nav %>
+          </nav>
+          
+          <header style="text-align: center">
+              <h2 style="margin-bottom: 0px"><%= board.title%></h2>
+              <div><%= board.date %></div>
+          </header>    
+          
+          <main>
+            <content>
+              <%= board.contents %>
+            </content>
+          </main>
+          
+          <bottom> <!-- 밖에 tag를 하나 더 달아줘야 float:right가 먹힘 왜인지모르겠음 -->
+              <div style="float: right">
+                  <a href="/board">Back</a>
+                  <a href="/board/<%= board._id %>/edit">Edit</a>
+                  <form action="/board/<%= board._id %>?_method=delete" method="post" style="display: inline">
+                  <a href="#" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a> 
+                  </form>
+              </div>    
+          </bottom>
+               
+          <footer>
+              <a href="https://github.com/dmzld">GitHub - dmzld</a>
+          </footer>
+        </div>
+        </div>
+    </body>
 </html>
