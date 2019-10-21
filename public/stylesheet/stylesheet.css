@@ -1,29 +1,77 @@
+/* tag */
+
 a{
     text-decoration:none;
     color:black;
 }
+
 a:hover{
     color:green;
 }
-/* a:visited{
-    color:blue;
-} */
+
 ul{
     list-style-type: none;
     margin-top: 0px;
     margin-left: 0px;
     padding-left: 0px;
 }
+
 li{
     margin:5px;
     margin-top: 0px;
     margin-left: 0px;
     padding-left: 0px;
 }
-html{width:80%;
+
+html{
+    width:80%;
     margin-left:auto;
     margin-right:auto;
 }
+
+main{
+    padding:10px;
+}
+
+nav{
+    border-bottom:1px solid lightgray;
+    padding:10px;
+    text-align: center;
+    font-weight: 900;
+}
+
+bottom{
+    padding:10px;
+}
+
+content{
+    padding:10px;
+}
+
+footer{
+    border-top:1px solid lightgray;
+    padding:10px;
+    text-align: center;
+}
+input{
+    border: 1px solid lightgrey;
+    width: 300px;
+    height: 20px;
+    margin-bottom: 10px;
+    font-family: Georgia, "맑은 고딕", serif;    
+}
+textarea{
+    border: 1px solid lightgrey;
+    width: 300px;
+    height: 20px;
+    margin-bottom: 10px;
+    font-family: Georgia, "맑은 고딕", serif;
+}
+
+
+
+/* class */
+
 .container{
     display:flex;
     /* flex-direction: row-reverse; */
@@ -32,40 +80,6 @@ html{width:80%;
 .content{
     display: flex;
 }
-main{
-    padding:10px;
-}
-/* nav, aside{
-    flex-basis:150px;
-    flex-shrink: 0;
-    flex-direction: row;
-    align-items: justify;
-} */
-nav{
-    border-bottom:1px solid lightgray;
-    padding:10px;
-    text-align: center;
-    font-weight: 900;
-}
-bottom{
-    padding:10px;
-}
-content{
-    padding:10px;
-}
-footer{
-    border-top:1px solid lightgray;
-    padding:10px;
-    text-align: center;
-}
-#item{
-    padding-right: 10px;
-    padding-left: 10px;
-    font-weight:600;
-}
-
-
-
 .contact h2{
     color: tomato;
   }
@@ -73,3 +87,32 @@ footer{
     display: inline-block;
     width: 50px;
   }
+
+.board{
+    width:100%;
+}
+.boardTitle {
+    width:50%;
+}
+.boardNickname {
+    width:20%;
+}
+.boardDate {
+    width:30%;
+}
+  
+
+
+/* id */
+
+#item{
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight:600;
+}
+
+#textButton{
+    background:none;
+    border:none;
+    font-size:1em;
+}

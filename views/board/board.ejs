@@ -22,15 +22,32 @@
             </header>
             
             <main>
-                <section>
-                    <ul>
+                <table class="board">
+                    <thead>
+                        <tr>
+                            <th class="boardTitle">Title</th>
+                            <th class="boardNickname">Nickname</th>
+                            <th class="boardDate">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         <% boards.forEach(function(boards) { %>
-                            <li>
-                              <a href="/board/<%= boards._id %>"><span><%= boards.title %></span><span style="float: right"><%= boards.date %></span></a>
-                            </li>
-                          <% }) %>            
-                    </ul>
-                </section>
+                            <tr>
+                                <td style="text-align: center">
+                                    <a href="/board/<%= boards._id %>">
+                                    <span><%= boards.title %></span>
+                                </a>
+                                </td>
+                                <td style="text-align: center">
+                                    <span><%= boards.writer_id %></span>
+                                </td>
+                                <td style="text-align: center">
+                                    <span><%= boards.date %></span></a>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
                 <div>
                     <a href="/board/new" style="float:right">Write</a>
                 </div>

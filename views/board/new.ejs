@@ -21,24 +21,25 @@
           </header>
           
           <main>
-              <form action="/board" method="post">
+              <form action="/board" method="post"  style="align-content: center" autocomplete=off>
                 
                 <div>
-                  <label for="title">title</label>
-                  <input type="text" id="title" name="title" value="">
+                  <input type="text" id="title" name="title" placeholder="제목을 입력해주세요">
+
+                  <input type="text" id="date" name="date" value="<%= new Date().toLocaleString() %>" readonly>
                 </div>
                 <div>
-                  <label for="date">date</label>
-                  <input type="text" id="date" name="date" value="<%= new Date().toLocaleString() %>">
+                  <input type="text" id="writer_id" name ="writer_id" placeholder="닉네임"> 
+
+                  <input type="password" id="password" name ="password" placeholder="패스워드"> 
                 </div>
                 <div>
-                  <label for="contents">contents</label>
-                  <input type="text" id="contents" name="contents" value="">
+                  <textarea type="text" id="contents" name="contents" value="" placeholder="내용을 입력해주세요" style="width: 100%; height: 250px"></textarea>
                 </div>
 
                 <bottom>
                     <div style="float:right">
-                        <button type="submit">Submit</button>
+                        <button id="textButton" type="submit">Submit</button>
                         <a href="/board">Back</a>
                     </div>
                 </bottom>
